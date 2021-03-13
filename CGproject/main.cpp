@@ -63,6 +63,7 @@ static const char* fShader = "Shaders/shader.frag";
 
 void CreateTriangle()
 {
+    //Rectangle Plot (0)
     unsigned int rectIndices[] =
     {
         0, 2, 1,
@@ -78,7 +79,8 @@ void CreateTriangle()
     Mesh* rect = new Mesh();
     rect->CreateMesh(rectVertices, rectIndices, 12, 6);
     meshList.push_back(rect);
-
+    
+    //Triangle Plot (1)
     GLfloat triangleVertices[] =
     {
         -1.0f, -1.0f, 0.0f, //0
@@ -90,10 +92,11 @@ void CreateTriangle()
         0, 1, 2,
     };
     Mesh* triangle = new Mesh();
-    triangle ->CreateMesh(triangleVertices, triangleIndices, 9, 3);
+    triangle->CreateMesh(triangleVertices, triangleIndices, 9, 3);
     meshList.push_back(triangle);
-
-     GLfloat circlevertices[] =
+    
+    //Circle Plot (2)
+    GLfloat circlevertices[] =
     {
         0.0f, 0.0f, 0.0f,       //0
         1.0f, 0.0f, 0.0f,       //1
@@ -107,7 +110,6 @@ void CreateTriangle()
         0.0f, 1.0f, 0.0f        //9
 
     };
-
     unsigned int circleindices[] =
     {
         0, 1, 2,
@@ -120,11 +122,9 @@ void CreateTriangle()
         0, 8, 9
 
     };
-
     Mesh* circle = new Mesh();
     circle->CreateMesh(circlevertices, circleindices, 30, 24);
     meshList.push_back(circle);
-
 }
 
 void CreateShaders()
@@ -455,7 +455,7 @@ int main()
         
         //Model 4: Topping
         
-        //Component1: Cherry
+        //Component1: Cherry Ball
         model = glm::mat4(1.0f);
         model = glm::translate(model, glm::vec3(0.35f, -triOffset2-0.35f, -1.5f));
         model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
@@ -469,6 +469,17 @@ int main()
             glUniform4fv(uniformColor, 1, glm::value_ptr(color));
             meshList[2]->RenderMesh();
         }
+        
+        //Component2: Cherry Branch
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(0.0f, -triOffset - 0.05f, -1.5f));
+        model = glm::scale(model, glm::vec3(0.6f, 0.07f, 1.0f));
+        model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+        color = glm::vec4(19.0/255.0, 74.0/255.0, 21.0/255.0, 1);
+        glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+        glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+        glUniform4fv(uniformColor, 1, glm::value_ptr(color));
+        meshList[0]->RenderMesh();
         
 
         glUseProgram(0);
