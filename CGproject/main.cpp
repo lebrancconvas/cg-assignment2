@@ -356,7 +356,7 @@ int main()
             glUniform4fv(uniformColor, 1, glm::value_ptr(color));
             meshList[2]->RenderMesh();
         }//11
-         model = glm::mat4(1.0f);
+        model = glm::mat4(1.0f);
         model = glm::translate(model, glm::vec3(0.45f, -triOffset2-0.35f, -1.5f));
         model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
         color = glm::vec4(255.0, 255.0, 255.0, 1);
@@ -454,6 +454,21 @@ int main()
         }
         
         //Model 4: Topping
+        
+        //Component1: Cherry
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(0.35f, -triOffset2-0.35f, -1.5f));
+        model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
+        color = glm::vec4(255.0/255.0, 64.0/255.0, 70.0/255.0, 1);
+        for (int i = 1; i <= 4; i++) {
+            if (i != 1) {
+                model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+            }
+            glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+            glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+            glUniform4fv(uniformColor, 1, glm::value_ptr(color));
+            meshList[2]->RenderMesh();
+        }
         
 
         glUseProgram(0);
