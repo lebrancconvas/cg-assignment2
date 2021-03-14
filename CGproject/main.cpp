@@ -46,7 +46,7 @@ float triMaxOffset2 = -0.03f;
 //Model 3: Top Pancake Variable Init
 bool direction3 = true;
 float triOffset3 = -6.0f;
-float triMaxOffset3 = -0.01f;
+float triMaxOffset3 = -0.25f;
 
 //Model 4: Topping Variable Init
 //bool direction4 = true;
@@ -460,7 +460,7 @@ int main()
             meshList[2]->RenderMesh();
         }//12
         
-        //Model 2 Row 2
+        //Model 2: Wipping Cream Row 2
         model = glm::mat4(1.0f);
         model = glm::translate(model, glm::vec3(-0.45f, -triOffset2-0.40f, -1.5f));
         model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
@@ -617,6 +617,271 @@ int main()
             glUniform4fv(uniformColor, 1, glm::value_ptr(color));
             meshList[2]->RenderMesh();
         }//12
+        
+        //Model 2: Wipping Cream Row 3
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(-0.45f, -triOffset2-0.45f, -1.5f));
+        model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
+        color = glm::vec4(255.0, 255.0, 255.0, 1);
+        for (int i = 1; i <= 4; i++) {
+            if (i != 1) {
+                model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+            }
+            glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+            glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+            glUniform4fv(uniformColor, 1, glm::value_ptr(color));
+            meshList[2]->RenderMesh();
+        }//1
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(-0.35f, -triOffset2-0.45f, -1.5f));
+        model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
+        color = glm::vec4(255.0, 255.0, 255.0, 1);
+        for (int i = 1; i <= 4; i++) {
+            if (i != 1) {
+                model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+            }
+            glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+            glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+            glUniform4fv(uniformColor, 1, glm::value_ptr(color));
+            meshList[2]->RenderMesh();
+        }//2
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(-0.25f, -triOffset2-0.45f, -1.5f));
+        model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
+        color = glm::vec4(255.0, 255.0, 255.0, 1);
+        for (int i = 1; i <= 4; i++) {
+            if (i != 1) {
+                model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+            }
+            glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+            glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+            glUniform4fv(uniformColor, 1, glm::value_ptr(color));
+            meshList[2]->RenderMesh();
+        }//3
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(-0.15f, -triOffset2-0.45f, -1.5f));
+        model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
+        color = glm::vec4(255.0, 255.0, 255.0, 1);
+        for (int i = 1; i <= 4; i++) {
+            if (i != 1) {
+                model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+            }
+            glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+            glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+            glUniform4fv(uniformColor, 1, glm::value_ptr(color));
+            meshList[2]->RenderMesh();
+        }//4
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(-0.05f, -triOffset2-0.45f, -1.5f));
+        model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
+        color = glm::vec4(255.0, 255.0, 255.0, 1);
+        for (int i = 1; i <= 4; i++) {
+            if (i != 1) {
+                model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+            }
+            glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+            glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+            glUniform4fv(uniformColor, 1, glm::value_ptr(color));
+            meshList[2]->RenderMesh();
+        }//5
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(0.05f, -triOffset2-0.45f, -1.5f));
+        model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
+        color = glm::vec4(255.0, 255.0, 255.0, 1);
+        for (int i = 1; i <= 4; i++) {
+            if (i != 1) {
+                model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+            }
+            glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+            glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+            glUniform4fv(uniformColor, 1, glm::value_ptr(color));
+            meshList[2]->RenderMesh();
+        }//6
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(0.15f, -triOffset2-0.45f, -1.5f));
+        model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
+        color = glm::vec4(255.0, 255.0, 255.0, 1);
+        for (int i = 1; i <= 4; i++) {
+            if (i != 1) {
+                model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+            }
+            glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+            glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+            glUniform4fv(uniformColor, 1, glm::value_ptr(color));
+            meshList[2]->RenderMesh();
+        }//7
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(0.25f, -triOffset2-0.45f, -1.5f));
+        model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
+        color = glm::vec4(255.0, 255.0, 255.0, 1);
+        for (int i = 1; i <= 4; i++) {
+            if (i != 1) {
+                model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+            }
+            glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+            glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+            glUniform4fv(uniformColor, 1, glm::value_ptr(color));
+            meshList[2]->RenderMesh();
+        }//8
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(0.15f, -triOffset2-0.45f, -1.5f));
+        model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
+        color = glm::vec4(255.0, 255.0, 255.0, 1);
+        for (int i = 1; i <= 4; i++) {
+            if (i != 1) {
+                model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+            }
+            glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+            glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+            glUniform4fv(uniformColor, 1, glm::value_ptr(color));
+            meshList[2]->RenderMesh();
+        }//9
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(0.25f, -triOffset2-0.45f, -1.5f));
+        model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
+        color = glm::vec4(255.0, 255.0, 255.0, 1);
+        for (int i = 1; i <= 4; i++) {
+            if (i != 1) {
+                model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+            }
+            glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+            glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+            glUniform4fv(uniformColor, 1, glm::value_ptr(color));
+            meshList[2]->RenderMesh();
+        }//10
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(0.35f, -triOffset2-0.45f, -1.5f));
+        model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
+        color = glm::vec4(255.0, 255.0, 255.0, 1);
+        for (int i = 1; i <= 4; i++) {
+            if (i != 1) {
+                model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+            }
+            glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+            glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+            glUniform4fv(uniformColor, 1, glm::value_ptr(color));
+            meshList[2]->RenderMesh();
+        }//11
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(0.45f, -triOffset2-0.45f, -1.5f));
+        model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
+        color = glm::vec4(255.0, 255.0, 255.0, 1);
+        for (int i = 1; i <= 4; i++) {
+            if (i != 1) {
+                model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+            }
+            glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+            glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+            glUniform4fv(uniformColor, 1, glm::value_ptr(color));
+            meshList[2]->RenderMesh();
+        }//12
+        
+        //Model 2: Wipping Cream Row 4
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(-0.25f, -triOffset2-0.48f, -1.5f));
+        model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
+        color = glm::vec4(255.0, 255.0, 255.0, 1);
+        for (int i = 1; i <= 4; i++) {
+            if (i != 1) {
+                model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+            }
+            glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+            glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+            glUniform4fv(uniformColor, 1, glm::value_ptr(color));
+            meshList[2]->RenderMesh();
+        }//3
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(-0.15f, -triOffset2-0.48f, -1.5f));
+        model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
+        color = glm::vec4(255.0, 255.0, 255.0, 1);
+        for (int i = 1; i <= 4; i++) {
+            if (i != 1) {
+                model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+            }
+            glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+            glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+            glUniform4fv(uniformColor, 1, glm::value_ptr(color));
+            meshList[2]->RenderMesh();
+        }//4
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(-0.05f, -triOffset2-0.48f, -1.5f));
+        model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
+        color = glm::vec4(255.0, 255.0, 255.0, 1);
+        for (int i = 1; i <= 4; i++) {
+            if (i != 1) {
+                model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+            }
+            glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+            glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+            glUniform4fv(uniformColor, 1, glm::value_ptr(color));
+            meshList[2]->RenderMesh();
+        }//5
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(0.05f, -triOffset2-0.48f, -1.5f));
+        model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
+        color = glm::vec4(255.0, 255.0, 255.0, 1);
+        for (int i = 1; i <= 4; i++) {
+            if (i != 1) {
+                model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+            }
+            glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+            glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+            glUniform4fv(uniformColor, 1, glm::value_ptr(color));
+            meshList[2]->RenderMesh();
+        }//6
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(0.15f, -triOffset2-0.48f, -1.5f));
+        model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
+        color = glm::vec4(255.0, 255.0, 255.0, 1);
+        for (int i = 1; i <= 4; i++) {
+            if (i != 1) {
+                model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+            }
+            glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+            glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+            glUniform4fv(uniformColor, 1, glm::value_ptr(color));
+            meshList[2]->RenderMesh();
+        }//7
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(0.25f, -triOffset2-0.48f, -1.5f));
+        model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
+        color = glm::vec4(255.0, 255.0, 255.0, 1);
+        for (int i = 1; i <= 4; i++) {
+            if (i != 1) {
+                model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+            }
+            glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+            glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+            glUniform4fv(uniformColor, 1, glm::value_ptr(color));
+            meshList[2]->RenderMesh();
+        }//8
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(0.35f, -triOffset2-0.48f, -1.5f));
+        model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
+        color = glm::vec4(255.0, 255.0, 255.0, 1);
+        for (int i = 1; i <= 4; i++) {
+            if (i != 1) {
+                model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+            }
+            glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+            glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+            glUniform4fv(uniformColor, 1, glm::value_ptr(color));
+            meshList[2]->RenderMesh();
+        }//9
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(0.45f, -triOffset2-0.48f, -1.5f));
+        model = glm::scale(model, glm::vec3(0.09f, 0.09f, 1.0f));
+        color = glm::vec4(255.0, 255.0, 255.0, 1);
+        for (int i = 1; i <= 4; i++) {
+            if (i != 1) {
+                model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+            }
+            glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+            glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+            glUniform4fv(uniformColor, 1, glm::value_ptr(color));
+            meshList[2]->RenderMesh();
+        }//10
+        
         
 
         //Model 1: Pancake Base
