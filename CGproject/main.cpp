@@ -1426,17 +1426,6 @@ int main()
             meshList[2]->RenderMesh();
         }
         
-        /* Model 5: Coffee */
-//        model = glm::mat4(1.0f);
-//        model = glm::translate(model, glm::vec3(0.1f, 0.64f, -2.0f));
-//        model = glm::scale(model, glm::vec3(0.8f, 0.0f, 1.0f));
-//        color = glm::vec4(0.0f, 0.0f, 0.0f, 1);
-//        glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-//        glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
-//        glUniform4fv(uniformColor, 1, glm::value_ptr(color));
-//        meshList[1]->RenderMesh();
-//        glUseProgram(0);
-
         //end draw
 
         mainWindow.swapBuffers();
